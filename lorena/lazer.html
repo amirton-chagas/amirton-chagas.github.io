@@ -52,9 +52,22 @@
 		<div id="fh5co-wrapper">
 		<div id="fh5co-page">
 	
-		<div class="fh5co-hero" data-section="home">
+		<style>
+@media only screen and (orientation: portrait) {
+  #bgarea {
+    background-image: url(images/cover_bg_1_v.jpg)
+  }
+}
+@media only screen and (orientation: landscape) {
+  #bgarea {
+    background-image: url(images/cover_bg_1.jpg)
+  }
+}
+</style>
+
+<div class="fh5co-hero" data-section="home">
     <div class="fh5co-overlay"></div>
-    <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/cover_bg_1.jpg);">
+    <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" id="bgarea">
         <div class="display-t">
             <div class="display-tc">
                 <div class="container">
@@ -166,7 +179,19 @@
 			</div>
 		</div>
 		
-		<div id="fh5co-started" style="background-image:url(images/cover_bg_2.jpg);" data-stellar-background-ratio="0.5">
+		<style>
+    @media only screen and (orientation: portrait) {
+        .rsvparea {
+        background-image: url(images/cover_bg_2_v.jpg)
+        }
+    }
+    @media only screen and (orientation: landscape) {
+        .rsvparea {
+        background-image: url(images/cover_bg_2.jpg)
+        }
+    }
+</style>
+<div id="fh5co-started" class="rsvparea" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
         <div class="container">
             <div class="row animate-box">
@@ -177,17 +202,17 @@
             </div>
             <div class="row animate-box">
                 <div class="col-md-10 col-md-offset-1">
-                    <form class="form-inline">
+                    <form class="form-inline" method="GET" action="https://www.cin.ufpe.br/~abc/rsvp.php">
                         <div class="col-md-4 col-sm-4">
                             <div class="form-group">
-                                <label for="name" class="sr-only">Nome</label>
-                                <input type="name" class="form-control" id="name" placeholder="Nome">
+                                <label for="nome" class="sr-only">Nomes</label>
+                                <input type="name" class="form-control" name="nome" id="nome" placeholder="Nome">
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4">
                             <div class="form-group">
-                                <label for="email" class="sr-only">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Email">
+                                <label for="fone" class="sr-only">Email</label>
+                                <input type="phone" class="form-control" name="fone" id="fone" placeholder="Telefone">
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4">
